@@ -1,0 +1,79 @@
+header {
+  padding: 0 2%;
+  background-image: url("../images/horizontalplant (1).jpg");
+  width: 100%;
+  height: 100vh;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media @mobile {
+    padding: 2%; 
+    background-image: url("../images/horizontalplant.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+
+  }
+
+  .navBar {
+    .flexin(row, space-between, flex-start);
+    margin: 0 3%; 
+
+    @media @mobile {
+      .flexin(column);
+    }
+
+    h1 {
+      width: 25%;
+      padding: 4% 4% 0%;
+      text-align: left;
+
+      @media @tablet {
+        text-align: left;
+        font-size: 4rem; 
+      }
+
+      @media @mobile {
+        width: 90%;
+        text-align: left;
+        padding: 0;
+      }
+    }
+    nav {
+      width: 45%;
+      margin: 6% 0% 0 0;
+      display: flex;
+
+      @media @tablet {
+        width: 60%;
+      }
+
+      @media @mobile {
+        width: 100%;
+        margin: 6% 0 2% 10%;
+        .flexin(column, center);
+      }
+
+      a {
+        padding: 0% 8%;
+        width: 100%;
+        font-size: 1.2rem;
+        color: @darkText;
+
+        @media @mobile {
+          padding: 3%;
+          text-align: left;
+        }
+
+        &:hover {
+          color: @accent;
+          
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,100 @@
+.mainContainer {
+  .flexin(column, center, center);
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  @media @mobile {
+    padding: 3%;
+  }
+
+  h4 {
+    margin: 2%;
+    text-align: center;
+    color: @accent;
+    line-height: 2rem;
+
+    @media @mobile {
+      padding: 5% 0;
+      border-bottom: 1px solid @darkText;
+    }
+  }
+
+  .details {
+    .flexin(row, center, flex-start);
+    width: 75%;
+    height: 15vh;
+    margin: 3%;
+    text-align: center;
+    color: @darkText;
+
+    @media @tablet {
+      height: 25vh;
+    }
+
+    @media @mobile {
+      .flexin(column, center, center);
+      width: 96%;
+      margin: 5% 0;
+      padding: 8% 0 15% 0;
+      border-bottom: 1px solid @darkText;
+    }
+
+    .steps {
+      margin: 0 2%;
+      border-radius: 3px;
+
+      @media @mobile {
+        margin: 2%;
+      }
+    }
+    #offStep {
+      align-self: center;
+
+      @media @mobile {
+        align-self: unset;
+      }
+    }
+    #offStep2 {
+      align-self: flex-end;
+
+      @media @mobile {
+        align-self: unset;
+      }
+
+      span {
+        color: @accent;
+        font-weight: 1000;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .buttonSection {
+    .flexin(column, normal, normal);
+    width: 25%;
+    padding: 2%;
+
+    @media @mobile {
+      width: 40%; 
+    }
+
+    .button {
+      .buttonStyle(none, @accent, @accent);
+
+      @media @mobile {
+        margin: 10%;
+        width: 100%; 
+      }
+
+      &:hover {
+        // color: white;
+        // background-color: @accent;
+        box-shadow: 8px 8px 8px rgba(0,0,0,0.3);    
+        transform: translateY(-2px);
+       
+      }
+    }
+  }
+}

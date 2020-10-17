@@ -1,0 +1,75 @@
+.unlogged {
+  background-image: url("../images/transparenthorizontal.png");
+  background-size: 50% 90%;
+  background-position: 100% 200%;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 45vh;
+
+  @media @mobile {
+    background-size: 75% 90%;
+    height: 100%;
+  }
+
+  h1 a:hover {
+    color: @accent;
+  }
+
+  .navBar {
+    .flexin(row, space-between, flex-start);
+    margin: 0 5%;
+
+    @media @mobile {
+      .flexin(column);
+    }
+
+    h1 {
+      width: 2%;
+      padding: 4% 4% 0%;
+      text-align: left;
+
+      @media @tablet {
+        text-align: left;
+        font-size: 4rem;
+      }
+
+      @media @mobile {
+        width: 90%;
+        text-align: left;
+        padding: 0;
+      }
+    }
+    nav {
+      .flexin(row, space-evenly, flex-start);
+      width: 25%;
+      margin: 6% 0% 0 0;
+      display: flex;
+
+      @media @tablet {
+        width: 60%;
+      }
+
+      @media @mobile {
+        width: 100%;
+        margin: 6% 0 2% 10%;
+        .flexin(column, center);
+      }
+
+      a {
+        padding: 0% 8%;
+        width: 100%;
+        font-size: 1.2rem;
+        color: @darkText;
+
+        @media @mobile {
+          padding: 3%;
+          text-align: left;
+        }
+
+        &:hover {
+          color: @accent;
+        }
+      }
+    }
+  }
+}
