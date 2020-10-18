@@ -96,4 +96,14 @@ const LinkStyle = styled.div`
   margin: 5%;
 `;
 
-export { NavBar, LinkStyle, FormContainer };
+const StyledDashboard = styled.div`
+  width: 80%; 
+  /* border: 1px solid black;  */
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+`
+
+export { NavBar, LinkStyle, FormContainer, StyledDashboard };
