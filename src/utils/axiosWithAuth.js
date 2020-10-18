@@ -8,8 +8,7 @@ const axiosWithAuth = () => {
         headers: {
             authorization: token,
         },
-        // add deployed backend url here 
-        baseURL: "",
+        baseURL: "https://jswatermyplants-backend.herokuapp.com",
     });
 };
 

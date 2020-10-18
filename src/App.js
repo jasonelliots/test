@@ -31,6 +31,7 @@ function App() {
         </Route>
         
         <PrivateRoute path='/dashboard'>
+        <UnloggedNav />
           <LoggedNav />
           <Dashboard />
         </PrivateRoute>

@@ -4,9 +4,8 @@ import { FormContainer } from "../styledComponents";
 import axios from "axios";
 
 export default function Register() {
+  const { push } = useHistory();
   const [signUpInput, setSignUpInput] = useState({});
-
-  const history = useHistory();
 
   const handleChange = (event) => {
     setSignUpInput({ ...signUpInput, [event.target.name]: event.target.value });
@@ -16,20 +15,17 @@ export default function Register() {
     event.preventDefault();
     axios
       .post(
-        "https://wunderlist-api-2020.herokuapp.com/api/auth/register",
+        "https://jswatermyplants-backend.herokuapp.com/api/auth/register",
         signUpInput
       )
       .then((response) => {
         console.log("response from POST request in SIGNUP form", response);
         localStorage.setItem("token", response.data.token);
-        history.push("/dashboard");
+        push("/dashboard");
       })
       .catch((error) => console.log("Error from POST in SIGNUP form", error));
     setSignUpInput({
       username: "",
-      firstname: "",
-      lastname: "",
-      email: "",
       password: "",
     });
   };
@@ -44,16 +40,6 @@ export default function Register() {
             name="username"
             placeholder="Username"
             value={signUpInput.username || ""}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email Here"
-            value={signUpInput.email || ""}
             onChange={handleChange}
           />
         </div>
