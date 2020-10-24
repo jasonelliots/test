@@ -60,6 +60,8 @@ export default function Login() {
             .post("/api/auth/login", newLogin)
             .then((res) => {
                 window.localStorage.setItem("token", res.data.token);
+                window.localStorage.setItem('userid', res.data.user.id);
+                console.log(res.data)
                 push("/dashboard");
             })
             .catch((err) => {
