@@ -17,14 +17,14 @@ export default function Home() {
               plants</Link>
             </h1>
             <nav>
-              <a href="#mainContainer"> about</a>
+              <a href="#about"> about</a>
               <Link to="/login"> log in</Link>
               <Link to="/register"> register</Link>
             </nav>
           </div>
         </header>
 
-        <div class="mainContainer" id="mainContainer">
+        <div class="mainContainer" id="about">
           <h4>The simple solution to keep your plants alive and thriving.</h4>
 
           <div class="details">
