@@ -1,3 +1,8 @@
+A web application for users to keep track of their plants and their respective watering schedules.
+
+Link to backend repo: https://github.com/jasonelliots/Backend 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
